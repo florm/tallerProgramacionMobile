@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TallerProgramacion</string>
+    <string name="domicilio">Enviar a Capital Federal 1704 </string>
+    <string name="descripcionProducto">Zapatillas Run Blue adidas Sport 78 Tienda Oficial</string>
+    <string name="cantidadVendidos">6 vendidos</string>
+    <string name="cantidadFotos">6 fotos</string>
+    <string name="vendedor">por Sport 78</string>
+    <string name="precioViejo">$4.599</string>
+    <string name="precioNuevo">$3.889</string>
+    <string name="descuento">15% OFF</string>
+</resources>
