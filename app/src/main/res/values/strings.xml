@@ -8,4 +8,10 @@
     <string name="precioViejo">$4.599</string>
     <string name="precioNuevo">$3.889</string>
     <string name="descuento">15% OFF</string>
+    <string name="comprar">Comprar</string>
+    <string name="agregar">Agregar al carrito</string>
+    <string name="cuotas">Paga en hasta 12 cuotas</string>
+    <string name="cuandoLlega">Llega entre el 4 y el 8 de Octubre</string>
+    <string name="beneficio">Beneficio Mecardo Puntos</string>
+    <string name="envioGratis">Envio Gratis</string>
 </resources>

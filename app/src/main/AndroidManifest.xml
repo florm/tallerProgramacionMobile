@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="ar.edu.unlam.florenciamartin.tallerprogramacion">
 
+<!--    aca van los permisos que va a usar la aplicacion. Aca solo va el de
+internet. Porqe el resto de los permisos son en tiempo de ejecucion. Ver en main activity-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
