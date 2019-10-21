@@ -11,14 +11,16 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-        <LinearLayout
+        <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="@color/colorFondo">
+                android:background="@color/colorFondo"
+                >
 
 
             <LinearLayout
+                    android:id="@+id/barraPrincipal"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:background="@color/colorPrimary"
@@ -63,8 +65,28 @@
                         />
 
             </LinearLayout>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                <ProgressBar
+                        android:id="@+id/progressBar"
+                        style="?android:attr/progressBarStyleLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="200dp"
+                        android:layout_below="@id/barraPrincipal"
+                        />
+            </LinearLayout>
 
-
+            <LinearLayout
+                android:id="@+id/layoutContenido"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                    android:layout_below="@+id/barraPrincipal"
+                >
             <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -364,15 +386,10 @@
                         />
             </LinearLayout>
         </LinearLayout>
-        <ProgressBar
-                android:id="@+id/progressBar"
-                style="?android:attr/progressBarStyleLarge"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="200dp"
 
-                />
+
+        </RelativeLayout>
+
     </RelativeLayout>
 
 

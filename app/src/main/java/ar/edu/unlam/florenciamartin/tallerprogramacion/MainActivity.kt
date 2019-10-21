@@ -82,6 +82,7 @@ class MainActivity : AppCompatActivity() {
                                 nombreVendedor.text = usuario?.nickname
                             }
                             progressBar.setVisibility(View.GONE);
+                            layoutContenido.setVisibility(View.VISIBLE)
                         }
                     })
 
