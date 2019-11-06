@@ -1,6 +1,7 @@
 package ar.edu.unlam.florenciamartin.tallerprogramacion.api
 
 import ar.edu.unlam.florenciamartin.tallerprogramacion.modelo.Articulo
+import ar.edu.unlam.florenciamartin.tallerprogramacion.modelo.SearchResult
 import ar.edu.unlam.florenciamartin.tallerprogramacion.modelo.Usuario
 import retrofit2.Call
 import retrofit2.http.GET
@@ -12,8 +13,8 @@ interface MercadoLibreAPI {
     @GET("items/{itemId}")
     fun getArticle(@Path("itemId") id: String): Call<Articulo>
 
-//    @GET("sites/MLA/search")
-//    fun search(@Query("q") query: String): Call<SearchResult>
+    @GET("sites/MLA/search")
+    fun search(@Query("q") query: String): Call<SearchResult>
 
     @GET ("users/{idUsuario}")
     fun getVendedor(@Path("idUsuario") id: String) : Call<Usuario>

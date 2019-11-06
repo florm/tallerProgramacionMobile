@@ -1,6 +1,7 @@
 package ar.edu.unlam.florenciamartin.tallerprogramacion.api
 
 import ar.edu.unlam.florenciamartin.tallerprogramacion.modelo.Articulo
+import ar.edu.unlam.florenciamartin.tallerprogramacion.modelo.SearchResult
 import ar.edu.unlam.florenciamartin.tallerprogramacion.modelo.Usuario
 import com.google.gson.Gson
 import retrofit2.Callback
@@ -24,6 +25,10 @@ class API {
 
     fun getVendedor(id: String, callback: Callback<Usuario>){
         getAPI().getVendedor(id).enqueue(callback)
+    }
+
+    fun search(textoBusqueda: String, callback: Callback<SearchResult>){
+        getAPI().search(textoBusqueda).enqueue(callback)
     }
 
 
