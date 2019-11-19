@@ -56,13 +56,11 @@ class AdaptadorDeArticulos : RecyclerView.Adapter<AdaptadorDeArticulos.ViewHolde
 
             }
         })
-//        holder.itemView.setOnClickListener(){
-////            var intent = Intent(this, ProductoActivity::class.java)
-////            intent.putExtra("idProducto", holder.itemView.idProducto.text.toString())
-//            val intent = Intent(this, ProductoActivity::class.java)
-//            intent.putExtra("idProdcuto", holder.itemView.idProducto.text.toString())
-//            startActivity(intent)
-//        }
+        holder.itemView.setOnClickListener(){
+            val intent = Intent(holder.itemView.context, ProductoActivity::class.java)
+            intent.putExtra("idProducto", holder.itemView.idProducto.text.toString())
+            holder.itemView.context.startActivity(intent)
+        }
 
 
     }
