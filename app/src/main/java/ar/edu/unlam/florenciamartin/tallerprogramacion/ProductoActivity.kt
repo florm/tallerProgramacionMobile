@@ -57,10 +57,10 @@ class ProductoActivity : AppCompatActivity() {
 //        })
 
         //leo el extra que vino de la otra pantalla
-        val textoParametro = intent.extras.getString("busqueda");
+        val idProducto = intent.extras.getString("idProducto");
 
 
-        API().getArticle(textoParametro, object: Callback<Articulo> {
+        API().getArticle(idProducto, object: Callback<Articulo> {
             override fun onFailure(call: Call<Articulo>, t: Throwable) {
 //                //
             }
@@ -72,8 +72,16 @@ class ProductoActivity : AppCompatActivity() {
                         .into(imagenProducto)
                     cantidadFotos.text = producto?.imagenesProducto?.size.toString() + " fotos"
                     cantidadVendidos.text = producto?.vendidos + " vendidos"
-                    precioViejo.text = "$" +producto?.precioOriginal
-                    precioConDescuento.text = "$" + producto?.precioDescuento
+
+                    if(producto?.precioOriginal.isNullOrEmpty()){
+                        precioConDescuento.text = "$" + producto?.precioDescuento
+
+                    }
+                    else{
+                        precioViejo.text = "$" +producto?.precioOriginal
+                        precioConDescuento.text = "$" + producto?.precioDescuento
+
+                    }
                     nombreProducto.text = producto?.titulo
 
                     API().getVendedor(producto?.vendedorId.toString(), object:Callback<Usuario>{

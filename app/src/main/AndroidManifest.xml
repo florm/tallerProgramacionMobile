@@ -15,7 +15,8 @@ internet. Porqe el resto de los permisos son en tiempo de ejecucion. Ver en main
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             android:usesCleartextTraffic="true">
-        <activity android:name=".ListaProductosActivity"></activity>
+        <activity android:name=".activity_item_lista"></activity>
+        <activity android:name=".ListaProductosActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +24,7 @@ internet. Porqe el resto de los permisos son en tiempo de ejecucion. Ver en main
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ProductoActivity"></activity>
+        <activity android:name=".ProductoActivity" />
     </application>
 
 </manifest>
