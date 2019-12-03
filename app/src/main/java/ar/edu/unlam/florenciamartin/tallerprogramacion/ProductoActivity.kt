@@ -62,7 +62,8 @@ class ProductoActivity : AppCompatActivity() {
 
         API().getArticle(idProducto, object: Callback<Articulo> {
             override fun onFailure(call: Call<Articulo>, t: Throwable) {
-//                //
+                errorProducto.setVisibility(View.VISIBLE)
+                progressBar.setVisibility(View.GONE);
             }
             override fun onResponse(call: Call<Articulo>, response: Response<Articulo>) {
                 if (response.isSuccessful) {
@@ -86,7 +87,8 @@ class ProductoActivity : AppCompatActivity() {
 
                     API().getVendedor(producto?.vendedorId.toString(), object:Callback<Usuario>{
                         override fun onFailure(call: Call<Usuario>, t: Throwable) {
-                            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                            progressBar.setVisibility(View.GONE);
+                            errorProducto.setVisibility(View.VISIBLE)
                         }
 
                         override fun onResponse(call: Call<Usuario>, response: Response<Usuario>) {

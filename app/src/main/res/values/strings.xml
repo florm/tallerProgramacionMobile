@@ -14,4 +14,5 @@
     <string name="cuandoLlega">Llega entre el 4 y el 8 de Octubre</string>
     <string name="beneficio">Beneficio Mecardo Puntos</string>
     <string name="envioGratis">Envio Gratis</string>
+    <string name="error">Error de conexión. Por favor intente mas tarde</string>
 </resources>

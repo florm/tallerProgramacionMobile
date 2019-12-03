@@ -36,7 +36,7 @@ class ListaProductosActivity : AppCompatActivity() {
 
         API().search(textoBusqueda, object: Callback<SearchResult>{
             override fun onFailure(call: Call<SearchResult>, t: Throwable) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                error.setVisibility(View.VISIBLE)
             }
 
             override fun onResponse(call: Call<SearchResult>, response: Response<SearchResult>) {
