@@ -57,9 +57,9 @@ class AdaptadorDeArticulos : RecyclerView.Adapter<AdaptadorDeArticulos.ViewHolde
             }
         })
         holder.itemView.setOnClickListener(){
-            val intent = Intent(holder.itemView.context, ProductoActivity::class.java)
+            val intent = Intent(it.context, ProductoActivity::class.java)
             intent.putExtra("idProducto", holder.itemView.idProducto.text.toString())
-            holder.itemView.context.startActivity(intent)
+            it.context.startActivity(intent)
         }
 
 

@@ -16,7 +16,6 @@
             android:id="@+id/error"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
             android:visibility="invisible"
             >
 
@@ -27,8 +26,48 @@
                 android:text="@string/error"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"/>
+
+
     </RelativeLayout>
 
+    <RelativeLayout
+            android:id = "@+id/sinPublicaciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"
+            >
+        <ImageView
+                android:id="@+id/lupa"
+                android:layout_width="50dp"
+                android:layout_height="100dp"
+                android:background="#FFFFFF"
+                android:layout_centerHorizontal="true"
+                >
 
+        </ImageView>
+        <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sinResultados"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/lupa"
+
+                />
+        <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/revisar"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@+id/tv1"
+                android:textSize="10dp"
+                android:fontFamily="sans-serif-light"/>
+    </RelativeLayout>
 
 </RelativeLayout>

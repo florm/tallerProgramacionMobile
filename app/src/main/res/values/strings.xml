@@ -15,4 +15,6 @@
     <string name="beneficio">Beneficio Mecardo Puntos</string>
     <string name="envioGratis">Envio Gratis</string>
     <string name="error">Error de conexión. Por favor intente mas tarde</string>
+    <string name="sinResultados">No encontramos publicaciones</string>
+    <string name="revisar">Revisa que la palabra esté bien escrita</string>
 </resources>

@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.CardView
 import android.support.v7.widget.GridLayoutManager
+import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -41,10 +42,19 @@ class ListaProductosActivity : AppCompatActivity() {
 
             override fun onResponse(call: Call<SearchResult>, response: Response<SearchResult>) {
                 if(response.isSuccessful){
-                    val search = response.body()?.articulos
+                    val search = response.body()?.articulos !!
+                    if(search.isEmpty()){
+                        Picasso.get()
+                            .load(R.drawable.search)
+                            .into(lupa)
+                        sinPublicaciones.setVisibility(View.VISIBLE)
+                    }else{
+                        adapter.articulos = search as ArrayList<Articulo>
+                        adapter.notifyDataSetChanged()
+                    }
 
-                    adapter.articulos = search as ArrayList<Articulo>
-                    adapter.notifyDataSetChanged()
+
+
 
 
                 }
